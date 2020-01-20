@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ArtKart : Login</title>
+	<style type="text/css">
+		body{
+			font-family: helvetica;
+			font-size: 0.8em;
+			color: grey; 
+		}
+		#login{
+			border: 1px solid #dee2e6;
+			margin-left: 34%;
+			margin-top: 10%;
+			padding: 3%;
+			margin-right: 34%;
+			margin-bottom: 2%
+		}
+		#login input[type=password],input[type=email]{
+			margin-bottom: 8%;
+			width: 70%;
+			padding: 3%;
+			margin-left: 11%;
+			border: 1px solid #dee2e6;
+			border-radius: 3px;
+		}
+		#login input[type=password]:focus,input[type=email]:focus{
+			border-color: #5a50e5;
+			transition-duration: 0.3s;
+		}
+		input[type="submit"]{
+			margin-left: 11%;
+			background-color: #7971ea;
+			padding: 3%;
+			border-style:none;
+			border-color:#4f45e3;
+			border-radius: 7%;
+			color: white;
+			letter-spacing: 0.2em;
+			margin-bottom: 8%;
+		}
+		input[type="submit"]:hover{
+			background-color: #5a50e5;
+			border-color: #4f45e3;
+			top:-2px;
+			box-shadow: 0px 5px 20px -7px rgba(0,0,0,0.9);
+			transition-duration: .25s;
+		}
+		#logo{
+			width: 20%;
+			margin-left: 40%;
+			margin-bottom: 12%;
+			margin-top: 5%;
+		}
+		.buyer{
+			color: #4f45e3;
+			margin-left: 8%;
+			font-family: helvetica;
+			text-decoration: none;
+		}	
+		.buyer:hover{
+			color: #5a50e5;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<form id="login">
+			<img src="logo.jpeg" id="logo"><br>
+			<input type="email" name="email" placeholder="Email" required><br>
+			<input type="password" name="password" placeholder="Password" required><br>
+			<input type="submit" name="Login" value="LOG IN">
+			<a class="buyer" href="signup.html">Sign up</a>
+			<a class="buyer" href="forget.html">Forgot Password?</a>
+		</form>
+	</div>
+</body>
+</html>

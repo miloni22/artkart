@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ArtKart : Sign Up</title>
+	<style type="text/css">
+		body{
+			font-family: helvetica;
+			font-size: 0.8em;
+			color: grey; 
+		}
+		#login{
+			border: 1px solid #dee2e6;
+			margin-left: 32%;
+			margin-top: 2%;
+			padding: 3%;
+			margin-right: 32%;
+			margin-bottom: 2%
+		}
+		#login input[type=text],input[type=password],input[type=email],input[type="number"]{
+			margin-bottom: 5%;
+			width: 70%;
+			padding: 3%;
+			margin-left: 11%;
+			border: 1px solid #dee2e6;
+			border-radius: 3px;
+		}
+		#login input[type=file]{
+			background-color: white;
+			border-style: none;
+			margin-bottom: 5%;
+			width: 70%;
+			padding: 0%;
+			margin-left: 11%;
+		}
+		#login input[type=text]:focus,input[type=password]:focus,input[type=email]:focus,input[type="number"]:focus{
+			border-color: #5a50e5;
+			transition-duration: 0.3s;
+		}
+		#login input[type=radio]{
+			margin-left: 8%;
+			margin-bottom: 5%;
+		}
+		#buyer,#login h4{
+			color: #4f45e3;
+			margin-left: 11%;
+			font-family: helvetica;
+			text-decoration: none;
+			
+		}
+		input[type="submit"]{
+			margin-left: 11%;
+			background-color: #7971ea;
+			padding: 3%;
+			border-style:none;
+			border-color:#4f45e3;
+			border-radius: 7%;
+			color: white;
+			letter-spacing: 0.2em;
+		}
+		input[type="submit"]:hover{
+			background-color: #5a50e5;
+			border-color: #4f45e3;
+			top:-2px;
+			box-shadow: 0px 5px 20px -7px rgba(0,0,0,0.9);
+			transition-duration: .25s;
+		}
+		.radio{
+			margin-left: 11%;
+			margin-right: 5%;
+		}
+		#logo{
+			width: 16%;
+			margin-left: 40%;
+			margin-bottom: 3%;
+		}			
+	</style>
+</head>
+<body>
+	<div>
+		<form id="login">
+			<img src="logo.jpeg" id="logo"><br>
+			<input type="text" name="fname" placeholder="First Name" style="width: 30%;margin-right: 2%" required>
+			<input type="text" name="lname" placeholder="Last Name" style="width: 30%;margin-left: 0%" required><br>
+			<span class="radio">Gender</span> 
+			<input type="radio" name="gender" value="Male" required>Male
+			<input type="radio" name="gender" value="Female" required>Female<br>
+			<input type="text" name="address" placeholder="Address" required><br>
+			<input type="text" name="fname" placeholder="State" style="width: 30%;margin-right: 2%" required>
+			<input type="text" name="lname" placeholder="City" style="width: 30%;margin-left: 0%" required><br>
+			<input type="number" name="pincode" placeholder="Pincode" style="width: 30%;margin-right: 2%" required>
+			<input type="number" name="contact" placeholder="Contact" style="width: 30%;margin-left: 0%" required><br>
+			<input type="email" name="email" placeholder="Email" required><br>
+			<input type="text" name="psssword" placeholder="Password" required><br>
+			
+			<div id="seller">
+				<h4>Account Information</h4>
+				<input type="text" name="Ano" placeholder="Account Number"><br>
+				<input type="text" name="Ano" placeholder="Re-enter Account Number"><br>
+				<span class="radio">Account type</span> 
+				<input type="radio" name="Atyper" value="Current">Current
+				<input type="radio" name="Atype" value="Savings">Savings<br>
+				<input type="text" name="Aname" placeholder="Account Holder Name"><br>
+				<input type="text" name="ifsc" placeholder="IFSC Code"><br>
+				<h4>Tax Information</h4>
+				<input type="text" name="pan" placeholder="Pan Number"><br>
+				<input type="text" name="Ano" placeholder="Provisional GSTIN"><br>
+				<h4>Upload Signature</h4>
+				<input type="file" name="Uplaod" placeholder="Choose file..."><br>
+			</div>
+			<input type="submit" name="Login" value="SIGN IN"><br><br>
+			<a id="buyer">Sign in as seller</a>
+			</form>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+<script>
+	$("#seller").hide();
+ $("#buyer").click(function (){
+    $("#buyer").hide();
+    $("#seller").show();
+  });
+  
+</script>
+</body>
+</html>
